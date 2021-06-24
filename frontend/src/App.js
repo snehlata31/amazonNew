@@ -1,12 +1,12 @@
-
-import './App.css';
-
+import './index.css';
+import data from './data.js'
+import Product from './components/Product';
 function App() {
   return (
-    <div class="grid-container">
-      <header class="row">
+    <div className="grid-container" >
+      <header className="row">
         <div>
-          <a class="brand">amazona</a>
+          <a className="brand">amazona</a>
         </div>
         <div>
           <a href="cart.html">Cart</a>
@@ -14,122 +14,16 @@ function App() {
         </div>
       </header>
       <main>
-        <div class="row center">
-          <div class="card">
-            <a href="product.html">
-              <img src="./images/p1.jpg" class="medium" /></a>
-            <div class="card-body">
-              <a href="product.html"></a>
-              <h2 >Nike Slim Shirts</h2>
-              <div class="rating">
-                <span> <i class="fa fa-star"></i> </span>
-                <span> <i class="fa fa-star"></i> </span>
-                <span> <i class="fa fa-star"></i> </span>
-                <span> <i class="fa fa-star"></i> </span>
-                <span> <i class="fa fa-star"></i> </span>
-              </div>
-              <div class="price">
-                120$
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <a href="product.html">
-              <img src="./images/p1.jpg" class="medium" /></a>
-            <div class="card-body">
-              <a href="product.html"></a>
-              <h2 >Nike Slim Shirts</h2>
-              <div class="rating">
-                <span> <i class="fa fa-star"></i> </span>
-                <span> <i class="fa fa-star"></i> </span>
-                <span> <i class="fa fa-star"></i> </span>
-                <span> <i class="fa fa-star"></i> </span>
-                <span> <i class="fa fa-star"></i> </span>
-              </div>
-              <div class="price">
-                120$
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <a href="product.html">
-              <img src="./images/p1.jpg" class="medium" /></a>
-            <div class="card-body">
-              <a href="product.html"></a>
-              <h2 >Nike Slim Shirts</h2>
-              <div class="rating">
-                <span> <i class="fa fa-star"></i> </span>
-                <span> <i class="fa fa-star"></i> </span>
-                <span> <i class="fa fa-star"></i> </span>
-                <span> <i class="fa fa-star"></i> </span>
-                <span> <i class="fa fa-star"></i> </span>
-              </div>
-              <div class="price">
-                120$
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <a href="product.html">
-              <img src="./images/p1.jpg" class="medium" /></a>
-            <div class="card-body">
-              <a href="product.html"></a>
-              <h2 >Nike Slim Shirts</h2>
-              <div class="rating">
-                <span> <i class="fa fa-star"></i> </span>
-                <span> <i class="fa fa-star"></i> </span>
-                <span> <i class="fa fa-star"></i> </span>
-                <span> <i class="fa fa-star"></i> </span>
-                <span> <i class="fa fa-star"></i> </span>
-              </div>
-              <div class="price">
-                120$
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <a href="product.html">
-              <img src="./images/p1.jpg" class="medium" /></a>
-            <div class="card-body">
-              <a href="product.html"></a>
-              <h2 >Nike Slim Shirts</h2>
-              <div class="rating">
-                <span> <i class="fa fa-star"></i> </span>
-                <span> <i class="fa fa-star"></i> </span>
-                <span> <i class="fa fa-star"></i> </span>
-                <span> <i class="fa fa-star"></i> </span>
-                <span> <i class="fa fa-star"></i> </span>
-              </div>
-              <div class="price">
-                120$
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <a href="product.html">
-              <img src="./images/p1.jpg" class="medium" /></a>
-            <div class="card-body">
-              <a href="product.html"></a>
-              <h2 >Nike Slim Shirts</h2>
-              <div class="rating">
-                <span> <i class="fa fa-star"></i> </span>
-                <span> <i class="fa fa-star"></i> </span>
-                <span> <i class="fa fa-star"></i> </span>
-                <span> <i class="fa fa-star"></i> </span>
-                <span> <i class="fa fa-star"></i> </span>
-              </div>
-              <div class="price">
-                120$
-              </div>
-            </div>
-          </div>
+        <div className="row center">
+          {data.products.map((product) => (
+            <Product product={product}></Product>
+          ))}
         </div>
       </main>
-      <footer class="row center">
+      <footer className="row center">
         All Right preserved
       </footer>
-    </div>
+    </div >
   );
 }
 
