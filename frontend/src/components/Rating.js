@@ -5,7 +5,7 @@ const Rating = (props) => {
     return (
         <div>
 
-            <div class="rating">
+            <div className="rating">
                 <span>
                     <i
                         className={
